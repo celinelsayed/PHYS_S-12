@@ -1601,7 +1601,6 @@
 .u-section-13 .u-slider-1 {
   width: 916px;
   min-height: 1075px;
-  height: auto;
   margin: 0 97px 0 auto;
 }
 
@@ -1645,6 +1644,7 @@
   }
 
   .u-section-13 .u-slider-1 {
+    height: auto;
     margin-right: 24px;
   }
 }
