@@ -1259,20 +1259,18 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </div>
           </div>
           <body>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <button id="turn-on" name="turnon">Turn On </button>
+  <button id="turn-off" name="turnoff">Turn Off </button>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
-
-<script>
+  <script>
   // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyCQkb91m5Lr11yarh2NJhrKS9Ze2i7r708",
     authDomain: "huzzah-ledstrip.firebaseapp.com",
@@ -1283,9 +1281,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     appId: "1:184332568714:web:ea41e73fab11cf20238573",
     measurementId: "G-LKXFRRVMZ2"
   };
+  
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
 
   // Get a database reference to our blog
   var ref = firebase.database().ref("/");
