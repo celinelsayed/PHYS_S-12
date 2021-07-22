@@ -2146,9 +2146,37 @@
     width: 340px;
   }
 }.u-section-12 .u-sheet-1 {
-  min-height: 500px;
+  min-height: 670px;
 }
 
 .u-section-12 .u-text-1 {
-  margin: 20px 0 60px;
+  margin: 20px 0 0;
+}
+
+.u-section-12 .u-video-1 {
+  width: 832px;
+  height: 468px;
+  margin: -19px auto 51px;
+}
+
+.u-section-12 .embed-responsive-1 {
+  position: absolute;
+}
+
+@media (max-width: 991px) {
+  .u-section-12 .u-video-1 {
+    width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-12 .u-video-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-12 .u-video-1 {
+    width: 340px;
+  }
 }
