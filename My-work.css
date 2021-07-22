@@ -2106,4 +2106,43 @@
   .u-section-10 .u-video-3 {
     width: 340px;
   }
+}.u-section-11 .u-sheet-1 {
+  min-height: 1351px;
+}
+
+.u-section-11 .u-text-1 {
+  margin: 55px 0 0;
+}
+
+.u-section-11 .u-btn-1 {
+  background-image: none;
+  padding: 0;
+}
+
+.u-section-11 .u-video-1 {
+  width: 766px;
+  height: 404px;
+  margin: -684px auto 60px;
+}
+
+.u-section-11 .embed-responsive-1 {
+  position: absolute;
+}
+
+@media (max-width: 991px) {
+  .u-section-11 .u-video-1 {
+    width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-11 .u-video-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-11 .u-video-1 {
+    width: 340px;
+  }
 }
