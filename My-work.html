@@ -1446,20 +1446,20 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
   var ref = firebase.database().ref("/");
 
   // make the buttons call the function below 
-  document.getElementById('turn-on').addEventListener('click', turnOn, false);
-  document.getElementById('turn-off').addEventListener('click', turnOff, false);
+  document.getElementById('move-right').addEventListener('click', moveright, false);
+  document.getElementById('move-left').addEventListener('click', moveleft, false);
 
-  function turnOn(){
-    console.log("turning on");
+  function moveright(){
+    console.log("moving right");
     ref.update({
-      "LED_STATUS": "ON"
+      "STEPPER_DIR": "RIGHT"
     });
   }
 
-  function turnOff(){
-    console.log("turning off");
+  function moveleft(){
+    console.log("moving left");
     ref.update({
-      "LED_STATUS": "OFF"
+      "STEPPER_DIR": "LEFT"
     });
   } 
     </script>
@@ -1467,6 +1467,11 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
 </body>
           <br>
           <iframe src=https://create.arduino.cc/editor/celinlsayed/0e6511fb-28b0-4857-9809-e206b51e49d1/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+          <br>
+          <div class="u-video u-video-contain u-video-2">
+          <div class="embed-responsive embed-responsive-2">
+            <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="https://www.youtube.com/embed/P_5MGbAwYlA?mute=0&amp;showinfo=0&amp;controls=0&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
+          </div>
         </p>
       </div>
     </section>
