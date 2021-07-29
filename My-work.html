@@ -1055,7 +1055,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           <p>At first I attempted to follow <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://www.youtube.com/watch?v=YKSrSpmrFN0&amp;t=167s">this tutorial</a> for a lampshade; however it was for SolidWorks. I ended up getting the main shape in Fusion 360, but soon got lost trying to recreate it, since I didn't understand some of the tools. Instead I ended up creating a mesh dustbin using tips and tricks from sparkplug's youtube channel. Similair to the lampshade, the first step involved just creating the slant of the object, so you could then use the revolve command from the surface tools and extend that to 180 degrees. After that, I created new sketches on the actual plane of my object, going diagonally against my half-bin. Then i projected this line onto my bin (since it was curced), and used this new line to create the beginning of my mesh. Using the pipe tool, i made the first 'string', and then using the circular pattern tool I repeated this 20 times, creating the basis of my dust bin. Then I mirrored my half bin, meaning that the mesh lines doubled and I now had a fully functional bin. Finally for the finish touches, I drew and extruded a base, and changed the color of my bin to yellow (to make it a bit more cheery).&nbsp;
           </p>
           <p>
-            <br>
+            <iframe src="https://myhub.autodesk360.com/ue2f96764/shares/public/SH919a0QTf3c32634dcfa29eb7f158e5c573?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
           </p>
           <p>
             <img src="images/ScreenShot2021-07-10at11.41.20PM.png" align="center" style="width: 719px;" class="fr-dii fr-fic fr-fir" width="570">
@@ -1239,7 +1239,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           </p>
           <p>As for my Arduino Code, I had a long look through the Arduino Project Hub trying to find inpiration; however most projects used different componenets and supplies such as jumpers and Power N-channel, or just simply changed hues, I couldn't find anything I was satisfied with, so I had to greatly improvise. One thing I did realize is that I needed new libraries so I downloaded the FastLed Library on Arduino. Below you can find my complete code.</p>
           <p>
-            <br>
+            <iframe src=https://create.arduino.cc/editor/celinlsayed/e480757a-fe27-4b00-b731-5806f60ac700/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </p>
           <p>
             <br>
@@ -1283,8 +1283,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
           </p>
           <p>Using the arduino code, which is uploaded below (without the firebase generated secret code or details about my wifi) and following settuping up a Firebase account was easy and simple enough and I was able to control switching on and off from the actual firebase website using the Realtime Database console.</p>
           <p>
-            <br>
-          </p>
+            <iframe src=https://create.arduino.cc/editor/celinlsayed/0eb7514a-d0b6-4f4e-85c5-50f11dfa54ee/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>          </p>
           <p>Here you can see me controlling it via changing the console itself.</p>
           <p>
             <br>
@@ -1345,7 +1344,56 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
     <section class="u-clearfix u-section-13" id="sec-9032">
       <div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-align-center u-text u-text-1">Then after much troubleshooting I manged to get a usable web interface from anywhere in the World. You can try it here:<br>
-          <br>
+          <body>
+  <button id="turn-on" name="turnon">Turn On </button>
+  <button id="turn-off" name="turnoff">Turn Off </button>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCQkb91m5Lr11yarh2NJhrKS9Ze2i7r708",
+    authDomain: "huzzah-ledstrip.firebaseapp.com",
+    databaseURL: "https://huzzah-ledstrip-default-rtdb.firebaseio.com",
+    projectId: "huzzah-ledstrip",
+    storageBucket: "huzzah-ledstrip.appspot.com",
+    messagingSenderId: "184332568714",
+    appId: "1:184332568714:web:ea41e73fab11cf20238573",
+    measurementId: "G-LKXFRRVMZ2"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Get a database reference to our blog
+  var ref = firebase.database().ref("/");
+
+  // make the buttons call the function below 
+  document.getElementById('turn-on').addEventListener('click', turnOn, false);
+  document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+  function turnOn(){
+    console.log("turning on");
+    ref.update({
+      "LED_STATUS": "ON"
+    });
+  }
+
+  function turnOff(){
+    console.log("turning off");
+    ref.update({
+      "LED_STATUS": "OFF"
+    });
+  } 
+    </script>
+
+</body>
           <br>
           <br>And here's a video of it in action:<br>
           <br>
@@ -1366,9 +1414,57 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
         </div>
         <p class="u-text u-text-1">Then came controlling my machine using a computer, so for this, I decided to create a firebase database which would allow me to control the direction which the motor moves in.&nbsp;<br>The first thing was just following the Firebase tutorial again from the previous week from Nathan's website, but instead under the name steppermotor.&nbsp;<br>However, once it came to uploading the code, I only took the first bit of the code which set up the firebase server and established a wifi connection, however after that I wrote my own code which you can find below to change the direction of movement.&nbsp;<br>Here is the web interface I used to control them.&nbsp;<br>
           <br>
-          <br>
-          <br>
-          <br>
+          <body>
+  <button id="move-right" name="moveright">Move Right</button>
+  <button id="move-left" name="moveleft">Move Left </button>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDZeIfmpz4wqzNPN0S06yshFY4nGhZq4gw",
+    authDomain: "steppermotormachine.firebaseapp.com",
+    databaseURL: "https://steppermotormachine-default-rtdb.firebaseio.com",
+    projectId: "steppermotormachine",
+    storageBucket: "steppermotormachine.appspot.com",
+    messagingSenderId: "850896102515",
+    appId: "1:850896102515:web:8a3828862b935896763606",
+    measurementId: "G-HMHXN1J5F6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  // Get a database reference to our blog
+  var ref = firebase.database().ref("/");
+
+  // make the buttons call the function below 
+  document.getElementById('turn-on').addEventListener('click', turnOn, false);
+  document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+  function turnOn(){
+    console.log("turning on");
+    ref.update({
+      "LED_STATUS": "ON"
+    });
+  }
+
+  function turnOff(){
+    console.log("turning off");
+    ref.update({
+      "LED_STATUS": "OFF"
+    });
+  } 
+    </script>
+
+</body>
+
           <br>
           <br>
           <br>
@@ -1428,7 +1524,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             <br>
           </p>
           <p>
-            <br>
+           <iframe src=https://create.arduino.cc/editor/celinlsayed/d414cc67-6ff5-4015-a9a4-0688cfb348ef/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </p>
           <p>
             <br>
