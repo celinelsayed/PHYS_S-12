@@ -124,6 +124,7 @@
           <p style="text-align: left; line-height: 2;">The Greco-Roman Period took place from 332BC to 396AD so alot of Ancient Egyptian architecture took place during this&nbsp;period. To the right you can see a photo of some columns from the National Museum of Egyptian Civilization.</p>
           <p style="text-align: left; line-height: 2;">With my eye set, I began to design my lamp. Using Fusion 360, I began to figure out how to use it to create something similair to these columns. While the base of the column was easy (a simple sketch of a circule and extrude), the top of the column was alot more confusing, especially since Fusion is made more for CAD then 3D Design, so there was no simple 2 step solution. Instead, I thought what skill would be similair to this and watched <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://www.youtube.com/watch?v=l6JH1keaDU8">this tutorial</a> on how to create flowers on Fusion, and applied it to the top of my column. &nbsp;Then came the middle. Since I wanted to be able to see the colored lights coming through I used frosted glass to complete my lamp. Below, You can see my final product, as well as download the 3D, STL, and gcode file.
           </p>
+          <iframe src="https://myhub.autodesk360.com/ue2f96764/shares/public/SH919a0QTf3c32634dcf8afeb1d49c3ca4ef?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
           <p style="text-align: left;">
             <br>
           </p>
@@ -160,7 +161,7 @@
           </p>
           <p style="text-align: left; line-height: 2;">However, due to last minute restrictions due to Covid-19, I was not able to gain access to a 3D Printer; however, I was still set on achieving a similair effect, so I got to work using cardboard, airdry clay and hotglue. Initially starting with making two trays of carboard of 15x15x5, and then using clay to acheieve the spherical look.&nbsp;</p>
           <p style="text-align: left; line-height: 2;">For the top, I couldn't use clay as it was extremely heavy (which would likely cause it to break), so instead I used paper to acheive a similair effect to that which I had originally planned to achieve. Finally for the middle, I used laminating film to achieve the look of frosted glass while still giving me flexibility to bend it into a cylinder.&nbsp;</p>
-          <p style="text-align: left; line-height: 2;">Below you can see my (almost) finished physical product. While it didn't look the best, I knew my arts and crafts skills were not the ones being tested so I tried not to spend more than a few hours on it. Instead I worked on building the infrastructure, such as using wooden dowels to create support beams, and toilet paper roll which I then wrapped my LED strip around. The top of the lamp was basically empty since the LED strip only had to connected at one side to complete the circuit.&nbsp;</p>
+          <p style="text-align: left; line-height: 2;">I decided to save your eyes from looking at my almost finished product, I decided it was best looked at only in the dark, serving its purpose. While it didn't look the best, I knew my arts and crafts skills were not the ones being tested so I tried not to spend more than a few hours on it. Instead I worked on building the infrastructure, such as using wooden dowels to create support beams, and toilet paper roll which I then wrapped my LED strip around. The top of the lamp was basically empty since the LED strip only had to connected at one side to complete the circuit.&nbsp;</p>
           <hr>
           <p>
             <br>
@@ -179,19 +180,48 @@
           <p style="text-align: left;">
             <img src="images/ScreenShot2021-08-02at1.58.25AM.png" width="570" style="width: 610px;" class="fr-dib fr-fic">
           </p>
-          <p>Below is the Arduino code I uploaded to my circuit. The basic idea I found <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="https://create.arduino.cc/projecthub/muhammad-aqib/arduino-rgb-led-tutorial-fc003e">from this tutorial</a> but &nbsp;I used segements of the arduino code from <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://nathanmelenbrink.github.io/intro-dig-fab/09_networking/huzzah1b.html">the class page</a> to set it up with firebase, however designed my own interface for the HTML code. You can try it out here!&nbsp;
+          <p>Below is the Arduino code I uploaded to my circuit. The basic idea I found <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="https://create.arduino.cc/projecthub/muhammad-aqib/arduino-rgb-led-tutorial-fc003e">from this tutorial</a> but &nbsp;I used segements of the arduino code from <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://nathanmelenbrink.github.io/intro-dig-fab/09_networking/huzzah1b.html">the class page</a> to set it up with firebase, however designed my own interface for the HTML code. You can take a look at it here!&nbsp;
           </p>
           <p>
             <br>
           </p>
           <p>
-            <br>
+            <iframe src=https://create.arduino.cc/editor/celinlsayed/ff4c15c2-f84e-4352-a20f-af116b7a9bbd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </p>
           <p>
             <br>
           </p>
           <p>
-            <br>
+            <body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCOgm4TBcchufhTjiXoaXARZ4StWqV7_i4",
+    authDomain: "color-wheel-picker.firebaseapp.com",
+    databaseURL: "https://color-wheel-picker-default-rtdb.firebaseio.com",
+    projectId: "color-wheel-picker",
+    storageBucket: "color-wheel-picker.appspot.com",
+    messagingSenderId: "1087615105394",
+    appId: "1:1087615105394:web:56472a9dc04439dff485eb",
+    measurementId: "G-061RD6P6TE"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+<div class="container"><div class="row"><h1>ESP Color Picker</h1></div>
+<a class="btn btn-primary btn-lg" href="#" id="change_color" role="button">Change Color</a> 
+<input class="jscolor {onFineChange:'update(this)'} jscolor-active" id="rgb" autocomplete="off" style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"></div>
+<script>function update(picker) {document.getElementById('rgb').innerHTML = Math.round(picker.rgb[0]) + ', ' +  Math.round(picker.rgb[1]) + ', ' + Math.round(picker.rgb[2]);
+document.getElementById("change_color").href="?r" + Math.round(picker.rgb[0]) + "g" +  Math.round(picker.rgb[1]) + "b" + Math.round(picker.rgb[2]) + "&";}</script>
+
+<div style="clear: both; width: 239px; height: 129px; z-index: 1000; position: absolute; left: 323.15625px; top: 94px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 15px 0px;"></div><div style="position: relative; border: 1px solid rgb(187, 187, 187); background-color: rgb(255, 255, 255); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;"><div style="width: 237px; height: 127px;"><div style="position: absolute; left: 12px; top: 12px; border: 1px solid rgb(187, 187, 187);"><div style="position: relative; width: 181px; height: 101px;"><canvas width="181" height="101"></canvas></div><div style="position: absolute; top: 90px; left: -10px; height: 20px; width: 20px;"><div style="position: absolute; background-color: rgb(255, 255, 255); width: 4px; height: 20px; left: 8px; top: 0px;"></div><div style="position: absolute; background-color: rgb(255, 255, 255); height: 4px; width: 20px; top: 8px; left: 0px;"></div><div style="position: absolute; background-color: rgb(76, 76, 76); height: 18px; width: 2px; left: 9px; top: 1px;"></div><div style="position: absolute; background-color: rgb(76, 76, 76); width: 18px; height: 2px; top: 9px; left: 1px;"></div></div></div><div style="background-color: rgb(255, 255, 255); opacity: 0; position: absolute; left: 0px; top: 0px; width: 201px; height: 127px; cursor: crosshair;"></div><div style="display: block; position: absolute; right: 12px; top: 12px; border: 1px solid rgb(187, 187, 187);"><div style="overflow: hidden; width: 16px; height: 101px;"><canvas width="16" height="101"></canvas></div><div style="border: 1px solid rgb(255, 255, 255); position: absolute; left: -4px; top: -5px;"><div style="border: 2px solid rgb(76, 76, 76);"><div style="border: 1px solid rgb(255, 255, 255);"><div style="width: 16px; height: 3px;"></div></div></div></div></div><div style="background-color: rgb(255, 255, 255); opacity: 0; display: block; position: absolute; right: 0px; top: 0px; width: 36px; height: 127px; cursor: default;"></div><div style="display: none; position: absolute; left: 12px; bottom: 12px; padding: 0px 15px; height: 18px; border: 1px solid rgb(187, 187, 187); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif; text-align: center; cursor: pointer;"><span style="line-height: 18px;">Close</span></div></div></div></div></body>
           </p>
           <p>The way the code works is that when the color is picked, it automatically provides the color with a Hexadecimal value on the web interface, which then gets translated into seperate values of R, G, and B, which are then sent to the microcontroller where it goes through the circuit described earlier, using the transistor as an electron valve (aids in selecting the integer value of the color (number of electrons sent to each wire to create selected color)) where it finally outputs the selected color.</p>
           <hr>
@@ -268,7 +298,57 @@
           </p>
           <hr>
           <p>
-            <br>
+            <iframe src=https://create.arduino.cc/editor/celinlsayed/360c1585-e689-4a58-b85f-849b85c75d95/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+<body>
+  <button id="turn-on" name="turnon">Turn On Music Mode </button>
+  <button id="turn-off" name="turnoff">Turn Off Music Mode </button>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCI-6-hEWN0IuDY02txVDRerPkVGwpnzrE",
+    authDomain: "soundsensitiveled.firebaseapp.com",
+    databaseURL: "https://soundsensitiveled-default-rtdb.firebaseio.com",
+    projectId: "soundsensitiveled",
+    storageBucket: "soundsensitiveled.appspot.com",
+    messagingSenderId: "101986339954",
+    appId: "1:101986339954:web:bc3f71a16245f9ad6f06eb"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Get a database reference to our blog
+  var ref = firebase.database().ref("/");
+
+  // make the buttons call the function below 
+  document.getElementById('turn-on').addEventListener('click', turnOn, false);
+  document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+  function turnOn(){
+    console.log("turning on");
+    ref.update({
+      "LED_STATUS": "ON"
+    });
+  }
+
+  function turnOff(){
+    console.log("turning off");
+    ref.update({
+      "LED_STATUS": "OFF"
+    });
+  } 
+    </script>
+
+</body>
           </p>
         </div>
       </div>
