@@ -127,6 +127,7 @@
           <p style="text-align: left;">
             <br>
           </p>
+          <iframe src="https://myhub.autodesk360.com/ue2f96764/shares/public/SH919a0QTf3c32634dcf8afeb1d49c3ca4ef?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
           <p style="text-align: left;">
             <br>
           </p>
@@ -182,7 +183,7 @@
           <p>Below is the Arduino code I uploaded to my circuit. The basic idea I found <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="https://create.arduino.cc/projecthub/muhammad-aqib/arduino-rgb-led-tutorial-fc003e">from this tutorial</a> but &nbsp;I used segements of the arduino code from <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://nathanmelenbrink.github.io/intro-dig-fab/09_networking/huzzah1b.html">the class page</a> to set it up with firebase, however designed my own interface for the HTML code. You can try it out here!&nbsp;
           </p>
           <p>
-            <br>
+            <iframe src=https://create.arduino.cc/editor/celinlsayed/ff4c15c2-f84e-4352-a20f-af116b7a9bbd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </p>
           <p>
             <br>
@@ -191,7 +192,36 @@
             <br>
           </p>
           <p>
-            <br>
+            <body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCOgm4TBcchufhTjiXoaXARZ4StWqV7_i4",
+    authDomain: "color-wheel-picker.firebaseapp.com",
+    databaseURL: "https://color-wheel-picker-default-rtdb.firebaseio.com",
+    projectId: "color-wheel-picker",
+    storageBucket: "color-wheel-picker.appspot.com",
+    messagingSenderId: "1087615105394",
+    appId: "1:1087615105394:web:56472a9dc04439dff485eb",
+    measurementId: "G-061RD6P6TE"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+<div class="container"><div class="row"><h1>ESP Color Picker</h1></div>
+<a class="btn btn-primary btn-lg" href="#" id="change_color" role="button">Change Color</a> 
+<input class="jscolor {onFineChange:'update(this)'} jscolor-active" id="rgb" autocomplete="off" style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"></div>
+<script>function update(picker) {document.getElementById('rgb').innerHTML = Math.round(picker.rgb[0]) + ', ' +  Math.round(picker.rgb[1]) + ', ' + Math.round(picker.rgb[2]);
+document.getElementById("change_color").href="?r" + Math.round(picker.rgb[0]) + "g" +  Math.round(picker.rgb[1]) + "b" + Math.round(picker.rgb[2]) + "&";}</script>
+
+<div style="clear: both; width: 239px; height: 129px; z-index: 1000; position: absolute; left: 323.15625px; top: 94px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 15px 0px;"></div><div style="position: relative; border: 1px solid rgb(187, 187, 187); background-color: rgb(255, 255, 255); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;"><div style="width: 237px; height: 127px;"><div style="position: absolute; left: 12px; top: 12px; border: 1px solid rgb(187, 187, 187);"><div style="position: relative; width: 181px; height: 101px;"><canvas width="181" height="101"></canvas></div><div style="position: absolute; top: 90px; left: -10px; height: 20px; width: 20px;"><div style="position: absolute; background-color: rgb(255, 255, 255); width: 4px; height: 20px; left: 8px; top: 0px;"></div><div style="position: absolute; background-color: rgb(255, 255, 255); height: 4px; width: 20px; top: 8px; left: 0px;"></div><div style="position: absolute; background-color: rgb(76, 76, 76); height: 18px; width: 2px; left: 9px; top: 1px;"></div><div style="position: absolute; background-color: rgb(76, 76, 76); width: 18px; height: 2px; top: 9px; left: 1px;"></div></div></div><div style="background-color: rgb(255, 255, 255); opacity: 0; position: absolute; left: 0px; top: 0px; width: 201px; height: 127px; cursor: crosshair;"></div><div style="display: block; position: absolute; right: 12px; top: 12px; border: 1px solid rgb(187, 187, 187);"><div style="overflow: hidden; width: 16px; height: 101px;"><canvas width="16" height="101"></canvas></div><div style="border: 1px solid rgb(255, 255, 255); position: absolute; left: -4px; top: -5px;"><div style="border: 2px solid rgb(76, 76, 76);"><div style="border: 1px solid rgb(255, 255, 255);"><div style="width: 16px; height: 3px;"></div></div></div></div></div><div style="background-color: rgb(255, 255, 255); opacity: 0; display: block; position: absolute; right: 0px; top: 0px; width: 36px; height: 127px; cursor: default;"></div><div style="display: none; position: absolute; left: 12px; bottom: 12px; padding: 0px 15px; height: 18px; border: 1px solid rgb(187, 187, 187); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: sans-serif; text-align: center; cursor: pointer;"><span style="line-height: 18px;">Close</span></div></div></div></div></body>
           </p>
           <p>The way the code works is that when the color is picked, it automatically provides the color with a Hexadecimal value on the web interface, which then gets translated into seperate values of R, G, and B, which are then sent to the microcontroller where it goes through the circuit described earlier, using the transistor as an electron valve (aids in selecting the integer value of the color (number of electrons sent to each wire to create selected color)) where it finally outputs the selected color.</p>
           <hr>
@@ -251,6 +281,57 @@
           <p style="line-height: 2;">One thing I didn't expect with this circuit is calibrating the sound sensor. I used the Arduino Microphone Module Sensor KY038 which acts as a sensitive capacitance microphone for detecting sound and an amplifier circuit. So I had to change the sensitivity using the potentiometer on the module. This changed the analog output voltage when the level of intensity received by the microphone.&nbsp;</p>
           <p style="line-height: 2;">As for the user interface, I made a simple on and off switch which signals for the microphone to turn on and therefore switches the mode from color picking. I used firebase to make the web interface, following the firebase tutorial from week 9 of the class webpage. Below you can find my web interface, as well as my Arduino code. I used <a class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://create.arduino.cc/projecthub/muhammad-aqib/arduino-rgb-led-tutorial-fc003e">this page</a> for inspiration with my code, specifically setting different values for the each color.
           </p>
+          <body>
+  <button id="turn-on" name="turnon">Turn On Music Mode </button>
+  <button id="turn-off" name="turnoff">Turn Off Music Mode </button>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCI-6-hEWN0IuDY02txVDRerPkVGwpnzrE",
+    authDomain: "soundsensitiveled.firebaseapp.com",
+    databaseURL: "https://soundsensitiveled-default-rtdb.firebaseio.com",
+    projectId: "soundsensitiveled",
+    storageBucket: "soundsensitiveled.appspot.com",
+    messagingSenderId: "101986339954",
+    appId: "1:101986339954:web:bc3f71a16245f9ad6f06eb"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Get a database reference to our blog
+  var ref = firebase.database().ref("/");
+
+  // make the buttons call the function below 
+  document.getElementById('turn-on').addEventListener('click', turnOn, false);
+  document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+  function turnOn(){
+    console.log("turning on");
+    ref.update({
+      "LED_STATUS": "ON"
+    });
+  }
+
+  function turnOff(){
+    console.log("turning off");
+    ref.update({
+      "LED_STATUS": "OFF"
+    });
+  } 
+    </script>
+
+</body>
+        </p>
+        <iframe src=https://create.arduino.cc/editor/celinlsayed/360c1585-e689-4a58-b85f-849b85c75d95/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           <p style="line-height: 2;">
             <br>
           </p>
@@ -290,7 +371,7 @@
           </p>
           <p>Then came the coding aspect. Below you can find my code for the lamp. I ended up creating one final new firebase server which stored everything I needed. I ended up needing to add a completely new section which motioned to turn on the color picking circuit instead.&nbsp;</p>
           <p>
-            <br>
+            <iframe src=https://create.arduino.cc/editor/celinlsayed/21e25347-c193-41de-89c4-99622fb449dd/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
           </p>
           <p>Here are some screenshots from my firebase server in a slideshow, the first two screenshots from the firebase consoles for each seperate circuit, and then finally my final lamp console.&nbsp;</p>
           <p>
